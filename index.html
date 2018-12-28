@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue-Admin</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./static/bg_ico.ico">
+  </head>
+  <body>
+    <div id="app">
+      <div class="init-box">
+        <style type="text/css">
+          .svg-icon{
+            width: 40px;
+            height: 40px;
+            stroke: #343640;
+            stroke-width: 2;
+            stroke-linecap: round;
+          }
+          .svg-icon .path{
+            fill: none;
+          }
+          .m-wipe{
+            background: none;
+            animation: loading-rotate 1s linear infinite;
+          }
+          .m-wipe .path{
+            background: none;
+            stroke-dasharray: 90,150;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            stroke-width: 2px;
+            stroke: #20a0ff;
+            stroke-linecap: round;
+            animation: loading-wipe 1s ease-in-out infinite;
+          }
+          .m-loading{
+            background: none;
+            animation: loading-rotate 0.8s linear infinite;
+          }
+          @keyframes loading-rotate{
+            to{transform:rotate(1turn)}
+          }
+          @keyframes loading-wipe{
+            0%{
+              stroke-dasharray:1,200;
+              stroke-dashoffset:0;
+            }
+            50%{
+              stroke-dasharray:90,150;
+              stroke-dashoffset:-40px;
+            }
+            to{
+              stroke-dasharray:90,150;
+              stroke-dashoffset:-120px;
+            }
+          }
+          .init-box{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+          .init-box .init-loading{
+            width: 128px;
+            height: 128px;
+          }
+          .init-box .init-tips{
+            color: #8B90A0;
+          }
+        </style>
+        <div>
+          <svg viewBox="0 0 50 50" class="svg-icon m-loading init-loading">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="#F2F2F2" class="path"></circle>
+            <circle cx="25" cy="25" r="20" fill="none" stroke="#24A2FF" stroke-dasharray="60,150" class="path"></circle>
+          </svg>
+        </div>
+        
+        <p class="init-tips">初次加载，请耐心等待...</p>
+      </div>
+    </div>
+<script>
+
+function BrowserType() {  
+  var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+  var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器 
+  var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器  
+  
+  var alertFlag = true;
+  if (isIE){  
+       var reIE = new RegExp("MSIE (\\d+\\.\\d+);");  
+   reIE.test(userAgent);  
+   var fIEVersion = parseFloat(RegExp["$1"]);  
+   
+//	       alert(userAgent)
+//	       alert(fIEVersion)
+   if(fIEVersion == 55){
+   		alertFlag = false;
+   }else if(fIEVersion == 6){
+   		alertFlag = false;
+   }else if(fIEVersion == 7) { 
+				alertFlag = false;
+   }else if(fIEVersion == 8){ 
+				alertFlag = false;
+   }else { 
+   		alertFlag = true;
+   }//IE版本过低
+   } 
+//     alert(alertFlag)
+   if(!alertFlag){
+   		alert('您当前使用的浏览器版本过低！请更换使用IE9+、chrome、firefox、360极速等高版本浏览器！')
+   }
+   
+}//myBrowser() end  
+
+BrowserType();
+   		
+</script>
+    
+    
+  </body>
+</html>
+<style>
+  html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+</style>
