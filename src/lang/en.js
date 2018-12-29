@@ -23,6 +23,8 @@ export default {
 		avatarUpload: 'Avatar Upload',
 		components: 'components',
 		countTo: 'countTo',
-		awesomeSwiper: 'Vue Awesome Swiper'
+		awesomeSwiper: 'Vue Awesome Swiper',
+		circleMenu: 'circle menu',
+		videoPlayer: 'Video Player',
 	}
 }

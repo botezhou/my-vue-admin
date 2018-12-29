@@ -105,6 +105,18 @@ export default new Router({
           component: page('components-demo/awesomeSwiper'),
           meta: {title: 'Swiper轮播图', name: 'awesomeSwiper'}
         },
+        {
+          path: '/circleMenu',
+          name: 'circleMenu',
+          component: page('components-demo/circleMenu'),
+          meta: {title: '圆环菜单', name: 'circleMenu'}
+        },
+        {
+          path: '/videoPlayer',
+          name: 'videoPlayer',
+          component: page('components-demo/videoPlayer'),
+          meta: {title: '视频播放', name: 'videoPlayer'}
+        },
       ]
     },
   ]

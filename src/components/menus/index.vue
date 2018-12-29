@@ -181,6 +181,22 @@
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
+                },
+                {
+                  index:'circleMenu',
+                  name:'circleMenu',
+                  class_i:'fa fa-paper-plane',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
+                },
+                {
+                  index:'videoPlayer',
+                  name:'videoPlayer',
+                  class_i:'fa fa-paper-plane',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
                 }
               ]
               

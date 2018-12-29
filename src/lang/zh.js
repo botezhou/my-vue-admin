@@ -23,6 +23,8 @@ export default {
 		avatarUpload: '头像上传',
 		components: '组件',
 		countTo: 'countTo',
-		awesomeSwiper: 'Swiper轮播图'
+		awesomeSwiper: 'Swiper轮播图',
+		circleMenu: '圆环菜单',
+		videoPlayer: '视频播放',
 	}
 }

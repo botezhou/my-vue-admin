@@ -63,7 +63,7 @@ export default {
       box-sizing: border-box;
       height: 40px;
       overflow: hidden;
-      z-index: 999999;
+      z-index: 999;
       // border-radius: 3px;
       margin:0 0 5px 0;
       box-shadow: -3px 3px 10px #333333;
