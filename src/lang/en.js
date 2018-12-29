@@ -22,9 +22,9 @@ export default {
 		driver: 'Guide',
 		avatarUpload: 'Avatar Upload',
 		components: 'components',
-		countTo: 'countTo',
+		countTo: 'CountTo',
 		awesomeSwiper: 'Vue Awesome Swiper',
-		circleMenu: 'circle menu',
+		circleMenu: 'Circle menu',
 		videoPlayer: 'Video Player',
 	}
 }
