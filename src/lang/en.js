@@ -19,6 +19,7 @@ export default {
 		bar: 'Bar chart',
 		pie: 'Pie chart',
 		editor: 'Html5 Editor',
+		quillEditor: 'Vue-Quill-Editor',
 		driver: 'Guide',
 		avatarUpload: 'Avatar Upload',
 		components: 'components',
@@ -26,5 +27,6 @@ export default {
 		awesomeSwiper: 'Vue Awesome Swiper',
 		circleMenu: 'Circle menu',
 		videoPlayer: 'Video Player',
+		dragKanban: 'Drag Kanban',
 	}
 }

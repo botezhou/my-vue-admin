@@ -159,6 +159,14 @@
                   children:null
                 },
                 {
+                  index:'quillEditor',
+                  name:'quillEditor',
+                  class_i:'fa fa-edit',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
+                },
+                {
                   index:'avatarUpload',
                   name:'avatarUpload',
                   class_i:'fa fa-paper-plane',
@@ -193,6 +201,14 @@
                 {
                   index:'videoPlayer',
                   name:'videoPlayer',
+                  class_i:'fa fa-paper-plane',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
+                },
+                {
+                  index:'dragKanban',
+                  name:'dragKanban',
                   class_i:'fa fa-paper-plane',
                   class_span:'sb-cn',
                   is_group:false,

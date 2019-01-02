@@ -88,6 +88,12 @@ export default new Router({
           meta: {title: '富文本编辑器', name: 'html5Editor'}
         },
         {
+          path: '/quillEditor',
+          name: 'quillEditor',
+          component: page('components-demo/quillEditor'),
+          meta: {title: 'Quill-Editor', name: 'quillEditor'}
+        },
+        {
           path: '/avatarUpload',
           name: 'avatarUpload',
           component: page('components-demo/avatarUpload'),
@@ -116,6 +122,12 @@ export default new Router({
           name: 'videoPlayer',
           component: page('components-demo/videoPlayer'),
           meta: {title: '视频播放', name: 'videoPlayer'}
+        },
+        {
+          path: '/dragKanban',
+          name: 'dragKanban',
+          component: page('components-demo/dragKanban'),
+          meta: {title: '视频播放', name: 'dragKanban'}
         },
       ]
     },

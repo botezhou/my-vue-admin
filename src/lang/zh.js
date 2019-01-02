@@ -19,6 +19,7 @@ export default {
 		bar: '柱状图',
 		pie: '饼图',
 		editor: 'Html5编辑器',
+		quillEditor: 'Vue-Quill-Editor',
 		driver: '引导页',
 		avatarUpload: '头像上传',
 		components: '组件',
@@ -26,5 +27,6 @@ export default {
 		awesomeSwiper: 'Swiper轮播图',
 		circleMenu: '圆环菜单',
 		videoPlayer: '视频播放',
+		dragKanban: '可拖拽看板',
 	}
 }
