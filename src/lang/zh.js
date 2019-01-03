@@ -28,5 +28,6 @@ export default {
 		circleMenu: '圆环菜单',
 		videoPlayer: '视频播放',
 		dragKanban: '可拖拽看板',
+    css3: 'css3',
 	}
 }

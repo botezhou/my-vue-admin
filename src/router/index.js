@@ -38,7 +38,13 @@ export default new Router({
           name: 'driver',
           component: page('driver'),
           meta: {title: '向导', name: 'driver'}
-        }
+        },
+        {
+          path: '/css3',
+          name: 'css3',
+          component: page('css3'),
+          meta: {title: 'Css3', name: 'css3'}
+        },
       ]
     },
     {
@@ -127,9 +133,9 @@ export default new Router({
           path: '/dragKanban',
           name: 'dragKanban',
           component: page('components-demo/dragKanban'),
-          meta: {title: '视频播放', name: 'dragKanban'}
+          meta: {title: '可拖拽看板', name: 'dragKanban'}
         },
       ]
-    },
+    }
   ]
 })

@@ -28,5 +28,6 @@ export default {
 		circleMenu: 'Circle menu',
 		videoPlayer: 'Video Player',
 		dragKanban: 'Drag Kanban',
+    css3: 'css3',
 	}
 }
