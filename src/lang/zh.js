@@ -29,5 +29,7 @@ export default {
 		videoPlayer: '视频播放',
 		dragKanban: '可拖拽看板',
     css3: 'css3',
+    print: '打印',
+    tuicalendar: '全日历'
 	}
 }

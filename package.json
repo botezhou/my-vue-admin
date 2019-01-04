@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@lkmadushan/vue-tuicalendar": "^0.1.6",
-    "@toast-ui/vue-calendar": "^1.0.1",
+    "@toast-ui/vue-calendar": "^1.0.3",
     "axios": "^0.18.0",
     "dhtmlx-gantt": "^6.0.0",
     "driver.js": "^0.8.1",

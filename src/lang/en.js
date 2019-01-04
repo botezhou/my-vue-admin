@@ -29,5 +29,7 @@ export default {
 		videoPlayer: 'Video Player',
 		dragKanban: 'Drag Kanban',
     css3: 'css3',
+    print: 'print',
+    tuicalendar: 'tuicalendar'
 	}
 }

@@ -1,29 +1,27 @@
 <template>
   <div class="p20">
     <code>
-      引导页对于一些第一次进入项目的人很有用，你可以简单介绍下项目的功能。本 Demo 是基
+      本demo整理了纯css3实现的动画效果
     </code>
-    <div class="css3-box">
-      <div class="product">
-        <div class="product-image">
-          <img src="http://www.17sucai.com/preview/11/2017-09-05/kp/1.jpg" alt="Omar Dsoky">
-          <div class="info">
-            <h2>宝贝描述</h2>
-            <ul>
-              <li><strong>光照：</strong>全日照</li>
-              <li><strong>土壤：</strong>潮湿</li>
-              <li><strong>区域：</strong>9 - 11</li>
-              <li><strong>高度：</strong>2 - 3 英尺</li>
-              <li><strong>开花：</strong>中夏至中秋</li>
-              <li><strong>特点：</strong>耐热性好</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Page Content -->
     <div class="container">
       <el-row class="row">
+        <el-col class="imgBox">
+          <div class="product-image">
+            <img src="http://www.17sucai.com/preview/11/2017-09-05/kp/1.jpg" alt="Omar Dsoky">
+            <div class="info">
+              <h2>宝贝描述</h2>
+              <ul>
+                <li><strong>光照：</strong>全日照</li>
+                <li><strong>土壤：</strong>潮湿</li>
+                <li><strong>区域：</strong>9 - 11</li>
+                <li><strong>高度：</strong>2 - 3 英尺</li>
+                <li><strong>开花：</strong>中夏至中秋</li>
+                <li><strong>特点：</strong>耐热性好</li>
+              </ul>
+            </div>
+          </div>
+        </el-col>
         <el-col class="imgBox">
           <div class="hover ehover1">
             <img class="img-responsive" src="http://www.17sucai.com/preview/11/2017-06-16/Hovereffects/images/girl.jpg" alt="">

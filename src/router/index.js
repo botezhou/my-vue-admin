@@ -45,7 +45,26 @@ export default new Router({
           component: page('css3'),
           meta: {title: 'Css3', name: 'css3'}
         },
+        {
+          path: '/print',
+          name: 'print',
+          component: page('print'),
+          meta: {title: '打印', name: 'print'}
+        },
+        {
+          path: '/tuicalendar',
+          name: 'tuicalendar',
+          component: page('tuicalendar'),
+          meta: {title: '全日历', name: 'tuicalendar'}
+        },
       ]
+    },
+    {
+      path: '/print/download',
+      name: 'printDownload',
+      component: page('print/download'),
+      hidden: true
+      // meta: {title: '打印页面', name: 'printDownload'}
     },
     {
       path: '/charts',
