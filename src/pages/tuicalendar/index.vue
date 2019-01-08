@@ -1,6 +1,7 @@
 <template>
   <div class="p20">
-  <calendar style="height: 800px;"
+    <code>文档暂不健全，后期完善</code>
+  <calendar ref="calendar" style="height: 800px;"
             :calendars="calendarList"
             :schedules="scheduleList"
             :view="view"
@@ -20,6 +21,8 @@
 </template>
 <script>
   import 'tui-calendar/dist/tui-calendar.css'
+  import 'tui-calendar/node_modules/tui-date-picker/dist/tui-date-picker.css'
+  import 'tui-calendar/node_modules/tui-time-picker/dist/tui-time-picker.css'
   import { Calendar } from '@toast-ui/vue-calendar';
 
   export default {
@@ -48,8 +51,8 @@
             title: 'my schedule',
             category: 'time',
             dueDateClass: '',
-            start: '2019-01-02',
-            end: '2019-01-03'
+            start: '2019-01-09',
+            end: '2019-01-10'
           },
           {
             id: '2',
@@ -57,8 +60,8 @@
             title: 'second schedule',
             category: 'time',
             dueDateClass: '',
-            start: '2019-01-02',
-            end: '2019-01-03'
+            start: '2019-01-08',
+            end: '2019-01-09'
           }
         ],
         //显示的视图 月 周 日 month week days
@@ -67,7 +70,6 @@
         scheduleView: ['time'],
         theme: {
           'month.dayname.height': '30px',
-          'month.dayname.borderLeft': '1px solid #ff0000',
           'month.dayname.textAlign': 'center',
           'week.today.color': '#333',
           'week.daygridLeft.width': '100px',
@@ -107,25 +109,25 @@
     },
     method: {
       onAfterRenderSchedule(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onBeforeCreateSchedule(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onBeforeDeleteSchedule(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onBeforeUpdateSchedule(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onClickDayname(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onClickSchedule(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       },
       onClickTimezonesCollapseBtn(e) {
-        // implement your code
+        this.$refs.tuiCalendar.getRootElement();
       }
     }
   }
