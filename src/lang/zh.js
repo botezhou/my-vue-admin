@@ -4,7 +4,7 @@ export default {
 	},
 	skin: {
 		default: '默认',
-		dark: '黑色',
+		blue: '海蓝色',
 		young: '魔幻青',
 		purple: '暗金紫',
 		green: '天使绿',
@@ -30,6 +30,7 @@ export default {
 		dragKanban: '可拖拽看板',
     css3: 'css3',
     print: '打印',
-    tuicalendar: '全日历'
+    tuicalendar: '全日历',
+    formData: '生成的表单'
 	}
 }

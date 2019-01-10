@@ -59,19 +59,19 @@ export default {
     if(this.themes.isDriver) {
       return false
     }
-    this.setDriver(true)
-    this.driver = new Driver()
-    this.driver.defineSteps(steps)
+    this.setDriver(true);
+    this.driver = new Driver();
+    this.driver.defineSteps(steps);
     this.driver.start()
   },
 
   methods:{
     ...mapActions({
       setTheme: 'set_theme',
-      setDriver: 'set_isdriver' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+      setDriver: 'set_isdriver', // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
     }),
     switchTheme(theme) {
-      this.setTheme(theme.theme)
+      this.setTheme(theme.theme);
     },
     changeSide() {
       this.isCollapse = !this.isCollapse;

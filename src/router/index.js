@@ -34,6 +34,12 @@ export default new Router({
           meta: {title: '拖拽表单', name: 'dragForm'}
         },
         {
+          path: '/formData',
+          name: 'formData',
+          component: page('dragForm/formData'),
+          meta: {title: 'formData', name: 'formData'}
+        },
+        {
           path: '/driver',
           name: 'driver',
           component: page('driver'),

@@ -3,22 +3,22 @@ export default [
       label: '默认',
       name: 'default',
       theme: {
-        backgroundColor: '#16AAD8',
-        textColor: '#fff',
-        activeTextColor: '#ffd04b',
-        headerTheme: 'linear-gradient(to right, #16AAB8, #16AAD8)',
-        breadcrumbColor: 'linear-gradient(to right, #16AAD8, #16AAB8)'
-      }
-    },
-    {
-      label: '黑色',
-      name: 'dark',
-      theme: {
         backgroundColor: '#333940',
         textColor: '#E0E0E0',
         activeTextColor: '#ffd04b',
         headerTheme: 'linear-gradient(to right, #333, #333940)',
         breadcrumbColor: 'linear-gradient(to right, #333940, #333)'
+      }
+    },
+    {
+      label: '海蓝色',
+      name: 'blue',
+      theme: {
+        backgroundColor: '#16AAD8',
+        textColor: '#fff',
+        activeTextColor: '#ffd04b',
+        headerTheme: 'linear-gradient(to right, #16AAB8, #16AAD8)',
+        breadcrumbColor: 'linear-gradient(to right, #16AAD8, #16AAB8)'
       }
     },
     {
@@ -55,4 +55,3 @@ export default [
       }
     }
   ]
-  

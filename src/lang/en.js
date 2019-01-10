@@ -4,7 +4,7 @@ export default {
 	},
 	skin: {
 		default: 'Default',
-		dark: 'Dark',
+		dark: 'Sea Blue',
 		young: 'Magic green',
 		purple: 'Dark Gold Purple',
 		green: 'Angel green',
@@ -30,6 +30,7 @@ export default {
 		dragKanban: 'Drag Kanban',
     css3: 'css3',
     print: 'print',
-    tuicalendar: 'tuicalendar'
+    tuicalendar: 'tuicalendar',
+    formData: 'formData'
 	}
 }

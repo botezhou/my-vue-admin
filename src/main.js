@@ -14,11 +14,7 @@ import 'nprogress/nprogress.css';
 import Axios from  'axios'
 import i18n from './lang'
 import store from './store'
-
-import VueTuicalendar from '@lkmadushan/vue-tuicalendar'
-import 'tui-calendar/dist/tui-calendar.min.css'
-
-Vue.use(VueTuicalendar)
+import '@/utils/filter.js'
 Vue.use(ElementUI,{
   i18n: (key, value) => i18n.t(key, value)
 });

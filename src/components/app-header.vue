@@ -61,7 +61,7 @@ export default {
     // 全屏切换
     handleSwitchScreen() {
       if (this.isFullScreen) {
-        var doc = document
+        var doc = document;
         if (doc.exitFullscreen) {
           doc.exitFullscreen()
         } else if (doc.mozCancelFullScreen) {
@@ -73,7 +73,7 @@ export default {
         }
         this.isFullScreen = false
       } else {
-        var elem = document.documentElement
+        var elem = document.documentElement;
         if (elem.requestFullscreen) {
           elem.requestFullscreen()
         } else if (elem.mozRequestFullScreen) {
@@ -92,8 +92,8 @@ export default {
       this.$emit('changeTheme',theme)
     },
     changLang(lang) {
-      this.$i18n.locale = lang
-      this.langActive = lang
+      this.$i18n.locale = lang;
+      this.langActive = lang;
       Cookies.set('language',lang, { expires: 30 })
     }
   }

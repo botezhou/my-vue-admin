@@ -146,6 +146,8 @@ export const xzList = [
         {
             placeholder: "请选择",
             label: "随行人员",
+            defaultValue: '',
+            checked: '',
             multiple: true,
             required: false,
             
@@ -181,7 +183,8 @@ export const xzList = [
         componentName: 'DetailField',
         props: {
           label: "行程明细", 
-          addLabel: '增加明细'
+          addLabel: '增加明细',
+          index: 1
         },
         children: [
           {
@@ -258,6 +261,8 @@ export const xzList = [
             id: "applyUserId",
             placeholder: "请选择(必填)",
             label: "申请人",
+            defaultValue: '',
+            checked: '',
             multiple: false ,      // 类型(只能选择一人/可同时选择多人) 
             required: true
           }
@@ -274,7 +279,8 @@ export const xzList = [
         componentName: 'DetailField',
         props: {
           label: "费用明细", 
-          addLabel: '增加明细'
+          addLabel: '增加明细',
+          index: 1
         },
         children: [
           {
@@ -382,6 +388,8 @@ export const xzList = [
           id: "applyUserId",
           placeholder: "请选择(必填)",
           label: "申请人",
+          defaultValue: '',
+          checked: '',
           multiple: false,      // 类型(只能选择一人/可同时选择多人) 
           required: false
         }
@@ -650,7 +658,8 @@ export const xzList = [
         props: {
           label: "合同明细", 
           addLabel: '增加明细',
-          required: true
+          required: true,
+          index: 1
         },
         children: [
           {

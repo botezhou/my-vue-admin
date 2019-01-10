@@ -1,6 +1,8 @@
 <template>
   <div class="editForm">
-    <div class="submit-button"><el-button v-loading="loading" :disabled="false" type="primary" size="mini" @click="submitClick">保存</el-button></div>
+    <div class="submit-button">
+      <el-button v-loading="loading" :disabled="loading" type="primary" size="mini" @click="submitClick">保存</el-button>
+    </div>
     <el-row :gutter="20" class="editForm-box">
       <el-col class="edit-control">
         <el-tabs v-model="activeName">
@@ -336,7 +338,7 @@
                 <div class="icon-box" :class="{iconActive: selectIconIndex==index}" v-for="(item, index) in iconBox" :key="index" @click="iconClick(item,index)">
                   <div class="iconItem" :style="{'background':item.color}">
                     <div class="IconImg">
-                      <i :class="'iconfont '+item.icon"></i>
+                      <i :class="'fa '+item.icon"></i>
                     </div>
                   </div>
                   <div class="selectIcon" v-if="selectIconIndex==index">
@@ -354,10 +356,10 @@
       :visible.sync="dialogVisible"
       width="30%"
     >
-      <div style="text-align:center;"><i class="fa fa-check-circle blue mr10"></i>保存成功，该表单已启用！</div>
-      <div style="width:200px;margin: 20px auto;">
-        <router-link to="/workTai"><el-button size="mini">返回审批管理</el-button></router-link>
-        <el-button type="primary" size="mini" @click="setProcessClick">流程设置</el-button>
+      <div style="text-align:center;"><i class="fa fa-check-circle blue" style="margin-right: 10px;"></i>保存成功，该表单已启用！</div>
+      <div style="width:80px;margin: 20px auto;">
+        <router-link to="/formData"><el-button size="mini">查看表单</el-button></router-link>
+        <!--<el-button type="primary" size="mini" @click="setProcessClick">流程设置</el-button>-->
       </div>
     </el-dialog>
     <div class="submit-button"><el-button v-loading="loading" type="primary" :disabled="false" size="mini" @click="submitClick">保存</el-button></div>
@@ -369,7 +371,7 @@ import {kjList} from './list/kongjian'
 import {cqList} from './list/cqTaoJian'
 import {xzList} from './list/xzTaoJian'
 import {rsList} from './list/rsTaoJian'
-// import {allModelGroupURL, formTemplateURL} from '@/api/http'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'editForm',
   components: {
@@ -377,7 +379,7 @@ export default {
   },
   created () {
     // this.getGroup()
-    // this.getFormList()
+    this.getFormList()
     // this.initData()
   },
   data () {
@@ -404,31 +406,31 @@ export default {
       groupOptions: [],
       // 图标数据
       iconBox: [
-        {icon: 'icon-navicon-lymxtj', color: '#00B2EE'},
-        {icon: 'icon-drxx59', color: '#EE7942'},
-        {icon: 'icon-yongyin', color: '#F4A460'},
-        {icon: 'icon-caigou01', color: '#3CB371'},
-        {icon: 'icon-qingjiajiaban', color: '#00B2EE'},
-        {icon: 'icon-shezhi1', color: '#F4A460'},
-        {icon: 'icon-youxiang', color: '#3CB371'},
-        {icon: 'icon-xiaoxizhongxin', color: '#EE7942'},
-        {icon: 'icon-rizhi', color: '#3CB371'},
-        {icon: 'icon-peixunjihuaoff', color: '#F4A460'},
-        {icon: 'icon-jiaban', color: '#F4A460'},
-        {icon: 'icon-yuangonglizhi', color: '#00B2EE'},
-        {icon: 'icon-shangwuyongche', color: '#F4A460'},
-        {icon: 'icon-yiban', color: '#00B2EE'},
-        {icon: 'icon-huiyi', color: '#EE7942'},
-        {icon: 'icon-yuangongruzhi', color: '#00B2EE'},
-        {icon: 'icon-qingjia', color: '#F4A460'},
-        {icon: 'icon-qian', color: '#EE7942'},
-        {icon: 'icon-qiandao-kaoqindaqia', color: '#3CB371'},
-        {icon: 'icon-shou', color: '#00B2EE'},
-        {icon: 'icon-time', color: '#00B2EE'},
-        {icon: 'icon-tianxie', color: '#EE7942'},
-        {icon: 'icon-wodedaiban', color: '#F4A460'},
-        {icon: 'icon-icon-goods', color: '#3CB371'},
-        {icon: 'icon-zhuanzheng', color: '#00B2EE'},
+        {icon: 'fa-calendar-plus-o', color: '#00B2EE'},
+        {icon: 'fa-commenting', color: '#EE7942'},
+        {icon: 'fa-credit-card-alt', color: '#F4A460'},
+        {icon: 'fa-cubes', color: '#3CB371'},
+        {icon: 'fa-envelope-o', color: '#00B2EE'},
+        {icon: 'fa-exclamation-triangle', color: '#F4A460'},
+        {icon: 'fa-database', color: '#3CB371'},
+        {icon: 'fa-gear', color: '#EE7942'},
+        {icon: 'fa-heart', color: '#3CB371'},
+        {icon: 'fa-life-ring', color: '#F4A460'},
+        {icon: 'fa-lock', color: '#F4A460'},
+        {icon: 'fa-pie-chart', color: '#00B2EE'},
+        {icon: 'fa-tasks', color: '#F4A460'},
+        {icon: 'fa-car', color: '#00B2EE'},
+        {icon: 'fa-user', color: '#EE7942'},
+        {icon: 'fa-file', color: '#00B2EE'},
+        {icon: 'fa-id-card', color: '#F4A460'},
+        {icon: 'fa-telegram', color: '#EE7942'},
+        {icon: 'fa-bell', color: '#3CB371'},
+        {icon: 'fa-building', color: '#00B2EE'},
+        {icon: 'fa-coffee', color: '#00B2EE'},
+        {icon: 'fa-flag', color: '#EE7942'},
+        {icon: 'fa-globe', color: '#F4A460'},
+        {icon: 'fa-print', color: '#3CB371'},
+        {icon: 'fa-server', color: '#00B2EE'},
       ],
       shenPiEdit: {
         name: '',
@@ -455,9 +457,6 @@ export default {
         if (this.isChildClick) {
           this.fatherList[this.editFormIndex].children[this.childClickIndex].props.label = newValue.label
           this.fatherList[this.editFormIndex].children[this.childClickIndex].props.placeholder = newValue.placeholder
-          // if (newValue.required) {
-          //   this.fatherList[this.editFormIndex].children[this.childClickIndex].props.placeholder = newValue.placeholder+'(必填)'
-          // } 
           this.fatherList[this.editFormIndex].children[this.childClickIndex].props.unit = newValue.unit
           this.fatherList[this.editFormIndex].children[this.childClickIndex].props.multiple = newValue.multiple
           this.fatherList[this.editFormIndex].children[this.childClickIndex].props.startTimelabel = newValue.startTimelabel
@@ -476,16 +475,6 @@ export default {
         } else {
           this.fatherList[this.editFormIndex].props.label = newValue.label
           this.fatherList[this.editFormIndex].props.placeholder = newValue.placeholder
-          // if (newValue.required) {
-          //   if (this.fatherList[this.editFormIndex].props.placeholder.indexOf('(必填)')>-1) {
-          //     return
-          //   } else {
-          //     this.fatherList[this.editFormIndex].props.placeholder = newValue.placeholder+'(必填)'
-          //   }          
-          // } else {
-          //   console.log(newValue.placeholder)
-          //   this.fatherList[this.editFormIndex].props.placeholder = newValue.placeholder
-          // } 
           this.fatherList[this.editFormIndex].props.unit = newValue.unit
           this.fatherList[this.editFormIndex].props.multiple = newValue.multiple
           this.fatherList[this.editFormIndex].props.startTimeLabel = newValue.startTimeLabel
@@ -506,70 +495,33 @@ export default {
 　　　deep: true  
 　　}
   },
+  computed: {
+    ...mapGetters([
+      'themes',
+    ])
+  },
   methods: {
-    // initData() {
-    //   this.operateType = this.$route.query.type
-    //   if (this.$route.query.id) {
-    //     this.formTemplateId = this.$route.query.id
-    //   }
-    // },
-    // // 获取所有分组
-    // getGroup () {
-    //   this.$http.get(allModelGroupURL)
-    //     .then(res => {
-    //       if (res.msg) {
-    //         this.$message({
-    //           message: res.msg,
-    //           type: 'warning'
-    //         });
-    //       } else {
-    //         this.groupOptions = res
-    //       }            
-    //     })
-    //     .catch(err => {
-    //       console.log(err)
-    //     })
-    // },
+    ...mapActions({
+      setFormData: 'set_formData',
+    }),
     // 获取表单内容
-    // getFormList () {
-    //   if (this.$route.query.type == 'edit') {
-    //     this.$http.get(formTemplateURL+this.$route.query.id)
-    //       .then(res => {
-    //         console.log(res)
-    //         if (res.msg) {
-    //           this.$message({
-    //             message: res.msg,
-    //             type: 'warning'
-    //           });
-    //         } else {
-    //           this.modelId = res.formTemplate.modelId
-    //           this.usedConditionField = res.usedConditionField
-    //           this.fatherList = this.handleFormDataForGet(res.formTemplate.contents)
-    //           this.fatherList.map((item,index)=>{
-    //             // if (item.componentName == 'DetailField' || item.props.suite == 'suite') {
-    //             //   this.childList[index] = item.children
-    //             // }
-    //             if (item.props.suite == 'suite') {
-    //               this.disabled = true
-    //             }
-    //           })         
-    //           this.shenPiEdit.icon = res.model.metaInfo.icon
-    //           this.shenPiEdit.color = res.model.metaInfo.color
-    //           this.shenPiEdit.name = res.model.metaInfo.name
-    //           this.shenPiEdit.description = res.model.metaInfo.description
-    //           this.shenPiEdit.categoryId = res.model.metaInfo.categoryId
-    //           this.shenPiEdit.commentRequired = res.model.metaInfo.commentRequired
-    //           this.shenPiEdit.commentStarterVisible = res.model.metaInfo.commentStarterVisible
-    //         }            
-    //       })
-    //       .catch(err => {
-    //         console.log(err)
-    //       })
-    //   } else {
-    //     return
-    //   }
-      
-    // },
+    getFormList () {
+        const formData = this.themes.formdata;
+        const contents = JSON.parse(formData).contents;
+        if(contents) {
+          this.fatherList = contents;
+          this.shenPiEdit.icon = formData.icon;
+          this.shenPiEdit.color = formData.color;
+          this.shenPiEdit.name = formData.name;
+          this.shenPiEdit.description = formData.description;
+          this.shenPiEdit.categoryId = formData.categoryId;
+          this.shenPiEdit.commentRequired = formData.commentRequired;
+          this.shenPiEdit.commentStarterVisible = formData.commentStarterVisible;
+        }
+
+
+    },
+
     handleFormDataForGet(content) {
       content.map((item,index)=>{
         if (item.componentName == 'CalenderRangeField') {
@@ -580,13 +532,13 @@ export default {
     },
     // 选择图标
     iconClick (item, index) {
-      this.selectIconIndex = index
-      this.shenPiEdit.icon = item.icon
-      this.shenPiEdit.color = item.color
+      this.selectIconIndex = index;
+      this.shenPiEdit.icon = item.icon;
+      this.shenPiEdit.color = item.color;
     },
     // 表单数据改变时
     change (list) {
-      this.fatherList = JSON.parse(JSON.stringify(list))
+      this.fatherList = JSON.parse(JSON.stringify(list));
       list.map(item => {
         if (item.props.suite == 'suite') {
           this.disabled = true         
@@ -600,13 +552,7 @@ export default {
     },
     // 明细数据改变时
     childChange (list, index) {
-      this.editFormIndex = index
-      // this.childList[index] = JSON.parse(JSON.stringify(list))
-      // this.childList[index].map(item => {
-      //   if (item.children) {
-      //     this.childList[index].splice(this.childList[index].indexOf(item), 1)
-      //   }
-      // })
+      this.editFormIndex = index;
       this.fatherList[index].children = JSON.parse(JSON.stringify(list))
     },
     // 鼠标移入
@@ -635,13 +581,13 @@ export default {
     },
     // 点击表单元素
     formItemClick (element, index) {
-      this.activeFormName = 'first'
-      this.isChildClick = false
-      this.clickIndex = index
-      this.editFormIndex = index
-      this.childClickIndex = -1
-      this.editForm = JSON.parse(JSON.stringify(element.props))
-      this.editForm.componentName = element.componentName
+      this.activeFormName = 'first';
+      this.isChildClick = false;
+      this.clickIndex = index;
+      this.editFormIndex = index;
+      this.childClickIndex = -1;
+      this.editForm = JSON.parse(JSON.stringify(element.props));
+      this.editForm.componentName = element.componentName;
       if (element.componentName == 'OvertimeSuite') {
         this.labelTitle = '加班核算方式'
       } else if (element.componentName == 'RecruitmentPlanSuite') {
@@ -662,12 +608,12 @@ export default {
     },
     // 点击明细表单元素 i子级 index父级
     formChildItemClick (element, i, index) {
-      this.activeFormName = 'first'
-      this.isChildClick = true
-      this.clickIndex = -1
-      this.editFormIndex = index
-      this.childClickIndex = i
-      this.editForm = JSON.parse(JSON.stringify(element.props))
+      this.activeFormName = 'first';
+      this.isChildClick = true;
+      this.clickIndex = -1;
+      this.editFormIndex = index;
+      this.childClickIndex = i;
+      this.editForm = JSON.parse(JSON.stringify(element.props));
       this.editForm.componentName = element.componentName
     },
     // 删除表单元素
@@ -681,7 +627,7 @@ export default {
       if (this.fatherList[index].props.suite) {      
         this.disabled = false
       }
-      this.fatherList.splice(index, 1)
+      this.fatherList.splice(index, 1);
 
       if (this.fatherList.length==0) {
         this.activeFormName = 'second'
@@ -727,10 +673,14 @@ export default {
     },
     // 提交保存数据
     submitClick () {
-      this.loading = true
-      let isNull = true
-      this.buttonDisabled = true
-    
+      if(!this.shenPiEdit.name) {
+        this.$message.info('请填写审批名称');
+        return
+      }
+
+      this.loading = true;
+      let isNull = true;
+      this.buttonDisabled = true;
       this.fatherList.map(item => {
         if (item.componentName == 'AptitudeSuite') {
           item.children[0].props.options = item.props.options
@@ -747,64 +697,32 @@ export default {
         } else if (item.componentName == 'OvertimeSuite') {
           item.children[2].props.options = item.props.options
         }
-      })
-      // console.log(this.fatherList)
-      this.shenPiEdit.contents = this.fatherList
+      });
+      this.shenPiEdit.contents = this.fatherList;
       this.shenPiEdit.contents.map(item => {
         if (item.children) {
           if (item.children.length == 0) {
             this.$message.warning('明细组件内容为空，请填充组件内容')
-            this.loading = false
-            isNull = false
+            this.loading = false;
+            isNull = false;
             return
           }
           this.handleSubmitFormData(item.children)
         }
-      })
+      });
+
       if (!isNull) { return }
-      console.log(this.shenPiEdit)
-      if (this.operateType == 'edit') {
-        this.$http.put(formTemplateURL + this.formTemplateId, this.shenPiEdit)
-          .then(res => {
-            this.loading = false
-            if (res.msg) {
-              this.$message({
-                message: res.msg,
-                type: 'warning'
-              });
-            } else {
-              this.buttonDisabled = true
-              this.dialogVisible = true
-            }            
-          })
-          .catch(err => {
-             console.log(err)
-             this.buttonDisabled = true
-            this.loading = false
-          })
-      } else {
-        this.$http.post(formTemplateURL, this.shenPiEdit)
-          .then(res => {
-            this.loading = false
-            if (res.msg) {
-              this.$message({
-                message: res.msg,
-                type: 'warning'
-              });
-            } else {
-              this.operateType = 'edit'
-              this.formTemplateId = res.formTemplateId
-              this.modelId = res.modelId
-              this.buttonDisabled = true
-              this.dialogVisible = true
-            }            
-          })
-          .catch(err => {
-            console.log(err)
-            this.buttonDisabled = true
-            this.loading = false
-          })
-      }
+      //模拟数据请求
+      const _this = this;
+      setTimeout(function(){
+        _this.callBack()
+      },1000);
+      this.setFormData(JSON.stringify(this.shenPiEdit));
+    },
+    //模拟数据请求
+    callBack() {
+      this.dialogVisible = true;
+      this.loading = false;
     },
     handleSubmitFormData(components) {
       components.map(component => {
@@ -818,19 +736,6 @@ export default {
           this.handleSubmitFormData(component.children)
         }
       });
-    },
-    setProcessClick () {
-      this.$router.push({
-        path: '/setProcess', 
-        name: '审批流程',
-        params: { 
-          id: this.modelId,
-        },
-        query: { 
-          id: this.modelId,
-          type: 'set'
-        }
-      })
     }
   }
 }

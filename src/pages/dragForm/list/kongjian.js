@@ -128,6 +128,8 @@ export const kjList = [
     {
       placeholder: "请选择",
       label: "联系人",
+      checked: '',
+      defaultValue: '',
       multiple: true,       // 类型(只能选择一人/可同时选择多人) 
       required: false,
       print: false				// 是否参与打印
@@ -139,6 +141,7 @@ export const kjList = [
     {
       placeholder: "请选择",
       label: "部门",
+      checked: '',
       multiple: true,      // 类型(只能选择一个部门/可同时选择多个部门) 
       required: false,
       print: false				// 是否参与打印
@@ -151,7 +154,8 @@ export const kjList = [
       label: "明细", 
       addLabel: '增加明细',
       required: false,
-      print: false	 
+      print: false,
+      index: 1
     },
     children: [
 

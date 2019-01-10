@@ -20,7 +20,8 @@ export const cqList = [
         format: "yyyy/MM/dd HH:mm",
         autoCalcInterval: true,
         readonly: false,
-        unit: ''
+        unit: '',
+        defaultValue: ''
       }
     }, {
         componentName: 'TextField',  
@@ -63,7 +64,8 @@ export const cqList = [
           format: "yyyy/MM/dd HH:mm",
           autoCalcInterval: true,
           readonly: false,
-          unit: ''
+          unit: '',
+          defaultValue: ''
         }
       }, {
           componentName: 'RadioField', // 单选框(内部输入内容会被识别为字符串)
@@ -139,7 +141,8 @@ export const cqList = [
         props: {
             label: "行程明细", 
             addLabel: '增加明细',
-            required: true 
+            required: true,
+            index: 1
         },
         children: [
           {

@@ -13,6 +13,7 @@ export const rsList = [
             id: 'applyUserDeptId',
             placeholder: "请选择(必填)",
             label: "申请部门",
+            checked: '',
             multiple: false,      // 类型(只能选择一个部门/可同时选择多个部门) 
             required: true
           }
@@ -283,6 +284,8 @@ export const rsList = [
             id: 'participate',
             placeholder: "请选择",
             label: "参与培训人员",
+            defaultValue: '',
+            checked: '',
             multiple: true,
             required: false,
           }
@@ -293,6 +296,7 @@ export const rsList = [
             id: 'participationDept',
             placeholder: "请选择",
             label: "参与培训部门",
+            checked: '',
             multiple: true,
             required: false,
           }
@@ -472,6 +476,7 @@ export const rsList = [
         {
           placeholder: "请选择(必填)",
           label: "用人部门",
+          checked: '',
           multiple: false,       // 类型(只能选择一个/可同时选择多个) 
           required: true
         }
