@@ -63,6 +63,12 @@ export default new Router({
           component: page('tuicalendar'),
           meta: {title: '全日历', name: 'tuicalendar'}
         },
+        {
+          path: '/organizTree',
+          name: 'organizTree',
+          component: page('organizTree'),
+          meta: {title: '组织结构树', name: 'organizTree'}
+        },
       ]
     },
     {

@@ -10,7 +10,7 @@ const themes = {
 			headerTheme: Cookies.get('headerTheme') ? Cookies.get('headerTheme') : '' || 'linear-gradient(to right, #333940, #333)',
 		},
 		isDriver: Cookies.get('isDriver') ? Cookies.get('isDriver') : false || false,
-    formdata: sessionStorage.getItem('formdata') ? sessionStorage.getItem('formdata') : '1111' || '111',
+    formdata: sessionStorage.getItem('formdata') ? sessionStorage.getItem('formdata') : false || false,
 	},
 	mutations: {
 		SET_THEME: (state, themes) => {

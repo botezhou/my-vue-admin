@@ -506,10 +506,12 @@ export default {
     }),
     // 获取表单内容
     getFormList () {
-        const formData = this.themes.formdata;
-        const contents = JSON.parse(formData).contents;
-        if(contents) {
-          this.fatherList = contents;
+        if(this.themes.formdata) {
+          const formData = JSON.parse(this.themes.formdata);
+          const contents = formData.contents;
+          if(contents) {
+            this.fatherList = contents;
+          }
           this.shenPiEdit.icon = formData.icon;
           this.shenPiEdit.color = formData.color;
           this.shenPiEdit.name = formData.name;
@@ -517,8 +519,8 @@ export default {
           this.shenPiEdit.categoryId = formData.categoryId;
           this.shenPiEdit.commentRequired = formData.commentRequired;
           this.shenPiEdit.commentStarterVisible = formData.commentStarterVisible;
+          
         }
-
 
     },
 
@@ -811,6 +813,7 @@ export default {
       }
     }
     .wf-component{
+      height: auto;
       cursor: move;
       position:relative;
       box-sizing:border-box;

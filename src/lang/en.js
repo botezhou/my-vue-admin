@@ -31,6 +31,7 @@ export default {
     css3: 'css3',
     print: 'print',
     tuicalendar: 'tuicalendar',
+    organizTree: 'Organization Structure Tree',
     formData: 'formData'
 	}
 }

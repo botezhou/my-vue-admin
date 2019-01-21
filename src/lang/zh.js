@@ -31,6 +31,7 @@ export default {
     css3: 'css3',
     print: '打印',
     tuicalendar: '全日历',
+    organizTree: '组织结构树',
     formData: '生成的表单'
 	}
 }

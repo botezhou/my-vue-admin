@@ -13,7 +13,7 @@
       <app-sidebar :isCollapse="isCollapse" :backgroundColor="themes.theme.backgroundColor" :textColor="themes.theme.textColor" :activeColor="themes.theme.activeColor"></app-sidebar>
     </el-aside>
     <el-main class="app-body">
-      <breadcrumb :breadcrumbColor="themes.theme.breadcrumbColor" :backgroundColor="themes.theme.headerTheme"></breadcrumb>
+      <breadcrumb :breadcrumbColor="themes.theme.backgroundColor" :backgroundColor="themes.theme.backgroundColor"></breadcrumb>
         <el-main class="app-page-body"> 
           <router-view></router-view>
         </el-main>
