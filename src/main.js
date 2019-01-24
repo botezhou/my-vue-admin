@@ -11,6 +11,7 @@ import '@/assets/less/elementui.less';
 import '@/assets/less/scrollbar.css';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
+import '@/styles/index.less'
 import Axios from  'axios'
 import i18n from './lang'
 import store from './store'

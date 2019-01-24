@@ -28,6 +28,7 @@ export default {
 		circleMenu: 'Circle menu',
 		videoPlayer: 'Video Player',
 		dragKanban: 'Drag Kanban',
+    smallComponents: 'Small Components',
     css3: 'css3',
     print: 'print',
     tuicalendar: 'tuicalendar',

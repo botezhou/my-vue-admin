@@ -214,6 +214,14 @@
                   is_group:false,
                   children:null
                 },
+                {
+                  index:'smallComponents',
+                  name:'smallComponents',
+                  class_i:'fa fa-paper-plane',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
+                },
               ]
             },
             {

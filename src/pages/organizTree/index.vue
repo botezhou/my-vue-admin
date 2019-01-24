@@ -153,6 +153,7 @@
           this.$prompt('请编辑部门名称', '提示', {
             confirmButtonText: '确定',
             cancelButtonText: '取消',
+            inputValue: row.data.label
           }).then(({ value }) => {
             row.data.label = value
           }).catch(() => {

@@ -28,6 +28,7 @@ export default {
 		circleMenu: '圆环菜单',
 		videoPlayer: '视频播放',
 		dragKanban: '可拖拽看板',
+    smallComponents: '小组件',
     css3: 'css3',
     print: '打印',
     tuicalendar: '全日历',

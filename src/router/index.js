@@ -166,6 +166,12 @@ export default new Router({
           component: page('components-demo/dragKanban'),
           meta: {title: '可拖拽看板', name: 'dragKanban'}
         },
+        {
+          path: '/smallComponents',
+          name: 'smallComponents',
+          component: page('components-demo/smallComponents'),
+          meta: {title: '小组件', name: 'smallComponents'}
+        },
       ]
     }
   ]
