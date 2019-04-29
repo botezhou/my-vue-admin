@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import AppView from '@/components/app-view'
 const page = name => () => import('@/pages/' + name)
+const view = name => () => import('@/views/' + name)
 Vue.use(Router)
 
 export default new Router({
@@ -172,7 +173,25 @@ export default new Router({
           component: page('components-demo/smallComponents'),
           meta: {title: '小组件', name: 'smallComponents'}
         },
+        {
+          path: '/cityPicker',
+          name: 'cityPicker',
+          component: page('components-demo/cityPicker'),
+          meta: {title: '城市选择器', name: 'cityPicker'}
+        },
       ]
-    }
+    },
+    {
+      path: '/layout',
+      name: 'layout',
+      component: view('Layout'),
+      meta: {title: '可视化布局', name: 'layout'}
+    },
+    {
+      path: '/preview',
+      name: 'preview',
+      component: view('preview'),
+      meta: {title: '视图预览', name: 'preview'}
+    },
   ]
 })

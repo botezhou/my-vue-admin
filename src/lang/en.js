@@ -11,6 +11,7 @@ export default {
 	},
 	route: {
 		dashboard: 'Dashboard',
+		layout: 'Layout',
 		gantt: 'Gantt chart',
 		dragForm: 'Drag and drop form',
 		echarts: 'Echarts',
@@ -29,6 +30,7 @@ export default {
 		videoPlayer: 'Video Player',
 		dragKanban: 'Drag Kanban',
     smallComponents: 'Small Components',
+    cityPicker: 'City Picker',
     css3: 'css3',
     print: 'print',
     tuicalendar: 'tuicalendar',

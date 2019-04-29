@@ -11,6 +11,7 @@ export default {
 	},
 	route: {
 		dashboard: '总览',
+		layout: '可视化布局系统',
 		gantt: '甘特图',
 		dragForm: '拖拽表单',
 		echarts: '图表',
@@ -29,6 +30,7 @@ export default {
 		videoPlayer: '视频播放',
 		dragKanban: '可拖拽看板',
     smallComponents: '小组件',
+    cityPicker: '城市选择器',
     css3: 'css3',
     print: '打印',
     tuicalendar: '全日历',

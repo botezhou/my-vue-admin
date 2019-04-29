@@ -79,6 +79,14 @@
               children:null
             },
             {
+              index:'layout',
+              name:'layout',
+              class_i:'fa fa-window-maximize',
+              class_span:'sb-cn',
+              is_group:false,
+              children:null
+            },
+            {
               index:'gantt',
               name:'gantt',
               class_i:'fa fa-life-saver',
@@ -89,7 +97,7 @@
             {
               index:'dragForm',
               name:'dragForm',
-              class_i:'fa fa-tasks',
+              class_i:'fa fa-window-restore',
               class_span:'sb-cn',
               is_group:false,
               children:null
@@ -138,7 +146,7 @@
             {
               index:'driver',
               name:'driver',
-              class_i:'fa fa-paper-plane',
+              class_i:'fa fa-external-link-square',
               class_span:'sb-cn',
               is_group:false,
               children:null
@@ -146,7 +154,7 @@
             {
               index:'6',
               name:'components',
-              class_i:'fa fa-area-chart',
+              class_i:'fa fa-tree',
               class_span:'sb-cn',
               is_group:true,
               children: [
@@ -161,7 +169,7 @@
                 {
                   index:'quillEditor',
                   name:'quillEditor',
-                  class_i:'fa fa-edit',
+                  class_i:'fa fa-external-link',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -169,7 +177,7 @@
                 {
                   index:'avatarUpload',
                   name:'avatarUpload',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-picture-o',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -177,7 +185,7 @@
                 {
                   index:'countTo',
                   name:'countTo',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-square-o',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -185,7 +193,7 @@
                 {
                   index:'awesomeSwiper',
                   name:'awesomeSwiper',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-spinner',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -193,7 +201,7 @@
                 {
                   index:'circleMenu',
                   name:'circleMenu',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-th',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -201,7 +209,7 @@
                 {
                   index:'videoPlayer',
                   name:'videoPlayer',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-youtube-play',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -209,7 +217,7 @@
                 {
                   index:'dragKanban',
                   name:'dragKanban',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-tags',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -217,7 +225,15 @@
                 {
                   index:'smallComponents',
                   name:'smallComponents',
-                  class_i:'fa fa-paper-plane',
+                  class_i:'fa fa-star',
+                  class_span:'sb-cn',
+                  is_group:false,
+                  children:null
+                },
+                {
+                  index:'cityPicker',
+                  name:'cityPicker',
+                  class_i:'fa fa-location-arrow',
                   class_span:'sb-cn',
                   is_group:false,
                   children:null
@@ -227,7 +243,7 @@
             {
               index:'css3',
               name:'css3',
-              class_i:'fa fa-paper-plane',
+              class_i:'fa fa-css3',
               class_span:'sb-cn',
               is_group:false,
               children:null
@@ -235,7 +251,7 @@
             {
               index:'print',
               name:'print',
-              class_i:'fa fa-paper-plane',
+              class_i:'fa fa-print',
               class_span:'sb-cn',
               is_group:false,
               children:null
@@ -243,7 +259,7 @@
             {
               index:'tuicalendar',
               name:'tuicalendar',
-              class_i:'fa fa-paper-plane',
+              class_i:'fa fa-sun-o',
               class_span:'sb-cn',
               is_group:false,
               children:null
@@ -251,7 +267,7 @@
             {
               index:'organizTree',
               name:'organizTree',
-              class_i:'fa fa-paper-plane',
+              class_i:'fa fa-sitemap',
               class_span:'sb-cn',
               is_group:false,
               children:null
